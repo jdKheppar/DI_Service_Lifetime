@@ -1,8 +1,12 @@
-fvar builder = WebApplication.CreateBuilder(args);
+using DI_Service_Lifetime.Services;
+
+var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
-
+builder.Services.AddSingleton<ISingletonGuidService, SingletonGuidService>();
+builder.Services.AddTransient<ITransientGuidService, TransientGuidService>();
+builder.Services.AddScoped<IScopedGuidService, ScopedGuidService>();
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
