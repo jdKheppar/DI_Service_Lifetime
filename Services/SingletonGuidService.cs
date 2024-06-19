@@ -3,7 +3,7 @@
     public class SingletonGuidService : ISingletonGuidService
     {
         private readonly Guid Id;
-        public SingletonGuidService(Guid id)
+        public SingletonGuidService()//Guid id
         {
             Id = Guid.NewGuid();
         }

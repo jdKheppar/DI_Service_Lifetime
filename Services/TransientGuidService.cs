@@ -3,7 +3,7 @@
     public class TransientGuidService : ITransientGuidService
     {
         private readonly Guid Id;
-        public TransientGuidService(Guid id)
+        public TransientGuidService()//Guid id
         {
             Id = Guid.NewGuid();
         }

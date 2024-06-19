@@ -3,7 +3,7 @@
     public class ScopedGuidService: IScopedGuidService
     {
         private readonly Guid Id;
-        public ScopedGuidService(Guid id)
+        public ScopedGuidService()//Guid id
         {
             Id = Guid.NewGuid();
         }
